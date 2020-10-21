@@ -1,0 +1,7 @@
+INDEX VERSION 1.131+C:\Users\phamx\Desktop\JavaCore\.metadata\.plugins\org.eclipse.jdt.core
+417061212.index
+2872044937.index
+2784195975.index
+1387095202.index
+774883689.index
+708502318.index
