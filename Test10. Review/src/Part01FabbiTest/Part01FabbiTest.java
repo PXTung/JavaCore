@@ -1,6 +1,8 @@
+package Part01FabbiTest;
+
 import java.util.Random;
 
-public class Main {
+public class Part01FabbiTest {
     public static void main(String[] args) {
 //        int n = 5;
 //        int[] arr = getArr(n);
