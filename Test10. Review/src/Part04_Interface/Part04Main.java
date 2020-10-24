@@ -7,6 +7,11 @@ public class Part04Main implements IA, IB{
     }
 
     @Override
+    public void testAbstract() {
+
+    }
+
+    @Override
     public void printDefault(String s) {
 
     }
