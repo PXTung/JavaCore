@@ -12,7 +12,7 @@ public class Main {
 //        show(arr, 1, arr.length);
         String a = String.valueOf(100);
         int x = Integer.parseInt(a, 10);
-        Integer.pa
+
         System.out.println(x);
     }
 
