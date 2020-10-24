@@ -1,29 +1,25 @@
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(truncateString("57439552816"));
+        int arr[] = {10, 27, 30, 4, 30, 66, 27, 8, 9, 10};
+        countLoop(arr);
+//        System.out.println(countLoop(arr) + " ");
     }
 
-    private static String truncateString(String s) {
-        do{
-            int i = s.length();
-            if (i == 0) break;
+    private static void countLoop(int[] arr) {
+        List<Integer> arrayList = Arrays.stream(arr).boxed().collect(Collectors.toList());
 
-            if (toInt(s, 0) % 3 == 0){
-                s = s.substring(1);
-            } else if(toInt(s, i - 1) % 3 == 0){
-                s = s.substring(0, i - 1);
-            } else if ((toInt(s, 0) + toInt(s, i - 1)) % 3 == 0){
-                s = s.substring(1, s.length() - 1);
-            } else
-                break;
-        }while (true);
-        return s;
+        Map<Integer, Integer> mapList = new HashMap<>();
+        for (Integer a : arrayList){
+            if (mapList.containsKey(a))
+                mapList.put(a, mapList.get(a) + 1);
+            else
+                mapList.put(a, 1);
+        }
+        Set<Integer> keySet = mapList.keySet();
+        for (Integer k : keySet)
+            System.out.println(k + ": " + mapList.get(k));
     }
-
-    private static int toInt(String s, int i) {
-        return Integer.parseInt(String.valueOf(s.charAt(i)));
-    }
-
 }
